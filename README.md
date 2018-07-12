@@ -13,7 +13,8 @@ objectdetection(ssd_mobilenet)<br>
 运行500step，total_loss=2.45。数据集是150张图片，5个分类，选取一张图片做验证图片。<br>
 test中有一主机和饮水机accuracy依次是59%和53%，与标准80%差距稍大。影响因素可能是：1.该图主机和饮水机一个bounding box有两个物体，有干扰（作业提供的图片，准确率还是
 高于80%）；2.迭代次数较少；3.代码问题<br>
-[tinymind地址](https://www.tinymind.com/executions/518sydc2 "https://www.tinymind.com/executions/518sydc2")
+[tinymind地址](https://www.tinymind.com/executions/518sydc2 "https://www.tinymind.com/executions/518sydc2")<br>
+![](https://github.com/Neilyooo/obj/blob/master/output.png "test.png")
 ## 小结<br>
 因为本作业是在tinymind上完成的，所以遇到的问题基本都是关于路径上的问题，这里小结一下。<br>
 * 因为数据集的地址上传之后才能知道。所以ssd_mobilenet.config这个文件里面的path路径是被动的修改，所以这个config文件要二次上传到数据集中，但是我在跑的过程
