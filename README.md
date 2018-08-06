@@ -14,10 +14,10 @@ ssd_mobilenet_v1（主要快）,mAP可能相对于其他预训练模型稍低。
 150张图片,5个分类(computer,monitor,scuttlebutt,water dispenser,drawer chest)。需要使用标注工具<br>
 ## code
 使用tensorflow官方代码[https://github.com/tensorflow/models/tree/r1.5](https://github.com/tensorflow/models/tree/r1.5)
-主要是research/object_detection目录下的物体检测框架代码，以及slim框架。简单解释代码<br>
-object_detection/train.py。运行训练，两个命令行参数:train_dir, pipeline_config_path<br>
-object_detection/eval.py。运行验证，--checkpoint_dir(输出在train_dir中) --eval_dir --pipeline_config_path<br>
-object_detection/export_inference_graph.py。导出训练好的模型。 --input_type --pipeline_config_path --train_checkpoint_prefix(model.ckpt) --output_diectory(exported_graphs冻结模型frozen_inference_graph.pb)<br>
+主要是research/object_detection目录下的物体检测框架代码，以及slim框架。<br>
+* object_detection/train.py。运行训练，两个命令行参数:train_dir, pipeline_config_path<br>
+* object_detection/eval.py。运行验证，--checkpoint_dir(输出在train_dir中) --eval_dir --pipeline_config_path<br>
+* object_detection/export_inference_graph.py。导出训练好的模型。 --input_type --pipeline_config_path --train_checkpoint_prefix(model.ckpt) --output_diectory(exported_graphs冻结模型frozen_inference_graph.pb)<br>
 最后将模型进行inference,需要上一步得到的frozen_inference_graph.pb以及标签文件labels_items.txt，执行inference.py脚本。输出output.png<br>
 ## 关于mobilenet
 自己也阅读了mobilenet的论文，再加上大牛对其网络的解析，对网络有了初步的了解。<br>
